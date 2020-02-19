@@ -79,6 +79,6 @@ class FloatingAd(youtubeAds):
 
 class index(models.Model):
     id = models.CharField(max_length=128,primary_key = True)
-    user_id = models.CharField(max_length=200,unique = True)
+    user_id = models.CharField(max_length=191,unique = True)
     user_name = models.CharField(max_length=200)
     

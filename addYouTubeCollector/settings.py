@@ -77,13 +77,25 @@ WSGI_APPLICATION = 'addYouTubeCollector.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'adYoutube',
-        'USER': 'user',
-        'PASSWORD': 'mdpuser',
-        'HOST': 'localhost',
+        'NAME': 'AdAnalystYoutube',
+        'USER': 'adanalystyt',
+        'PASSWORD': 'tRPWwVE4Hm',
+        'HOST': '129.88.46.38',
         'PORT': '',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'adYoutube',
+#         'USER': 'user',
+#         'PASSWORD': 'mdpuser',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
+
 
 
 # Password validation
