@@ -58,7 +58,7 @@ class Migration(migrations.Migration):
             name='index',
             fields=[
                 ('id', models.CharField(max_length=128, primary_key=True, serialize=False)),
-                ('user_id', models.CharField(max_length=200, unique=True)),
+                ('user_id', models.CharField(max_length=191, unique=True)),
                 ('user_name', models.CharField(max_length=200)),
             ],
         ),
