@@ -72,20 +72,20 @@ def store_Data_To_DataBase(request):
         
         #we have the user 
         #we test first if the user is connected on his gmail account while watching youtube videos 
-    if json_data["connected"] == False :
-        response[STATUS] = FAILURE
-        response[REASON] = NOT_CONNECTED_USER
-        print'there is no user'
-        return JsonResponse(response)
-        
          #we extract the user information
-    print'here we are'
-    user_id = sha512(str(json_data["user"]["id"])).hexdigest()
-    user_name = json_data["user"]["name"]
-    user_email = json_data["user"]["email"]
+    if json_data["connected"] == False :
+        user_id = sha512(str(json_data["user"]["id"]+json_data["country"])).hexdigest()
+        user_name = json_data["user"]["name"]+json_data["country"]
+        user_email = json_data["user"]["email"]+json_data["country"]
+    else:
+        user_id = sha512(str(json_data["user"]["id"])).hexdigest()
+        user_name = json_data["user"]["name"]
+        user_email = json_data["user"]["email"]
+    user_country = json_data["country"]
     u = user(id=user_id,
                   user_name= user_name,
-                  user_email = user_email
+                  user_email = user_email,
+                  country = user_country
          )
     u.save()
     print 'We saved the user'

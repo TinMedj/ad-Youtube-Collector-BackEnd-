@@ -32,6 +32,7 @@ class user(models.Model):
     id = models.CharField(max_length=128,primary_key = True)
     user_name = models.CharField(max_length=100)
     user_email = models.CharField(max_length=100)
+    country = models.CharField(max_length=5)
     videos = models.ManyToManyField(hostingVideo)
 
 
