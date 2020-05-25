@@ -150,7 +150,8 @@ def store_Data_To_DataBase(request):
         logger.info(': the ad was saved')
         print 'We cllected a video ad'
         videoAdInstance = videoAd(typeAd = type_ad,
-                    time = time,     
+                    time = time,  
+                    host_video_link = video_link,
                     link = link,
                     advertiser_name = advertiser_name,
                     ad_channel_description = ad_channel_description,
@@ -192,6 +193,7 @@ def store_Data_To_DataBase(request):
         print'channel img{}'.format(channel_img)
         floatAd = FloatingAd(typeAd = type_ad,
                 time = time,
+                host_video_link = video_link,
                 title = title,
                 description = description,
                 link = link,

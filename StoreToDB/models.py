@@ -34,6 +34,7 @@ class user(models.Model):
     user_email = models.CharField(max_length=100)
     country = models.CharField(max_length=5)
     videos = models.ManyToManyField(hostingVideo)
+    
 
 
 class youtubeAds(models.Model):
@@ -49,6 +50,8 @@ class youtubeAds(models.Model):
     reasons = models.ManyToManyField(adReason)
     time = models.DateField()
     users = models.ManyToManyField(user)
+    host_video_link = models.CharField(max_length=200,blank=True)
+
 
 
 class videoAd(youtubeAds):
